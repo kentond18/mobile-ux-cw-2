@@ -1,0 +1,36 @@
+:root {
+	--bs-primary: #04c8c8;
+	--bs-secondary: #026464;
+	--bs-light: #e6fefe;
+	--bs-primary-rgb: 4, 200, 200;
+	--bs-secondary-rgb: 2, 100, 100;
+	--bs-light-rgb: 230, 254, 254;
+	--bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+}
+
+.nav-link {
+	color: var(--bs-secondary);
+	font-size: 0.875rem;
+}
+
+.nav-link:hover {
+	color: var(--bs-primary);
+}
+
+.arrow-icon {
+	color: var(--bs-light);
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out;
+}
+.arrow-icon:hover {
+	color: var(--bs-secondary);
+}
+
+@media (min-width: 768px) {
+	.nav-link {
+		font-size: calc(1rem * 1.25);
+	}
+}
