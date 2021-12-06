@@ -29,15 +29,29 @@
 	class="flex flex-column vh-100 justify-content-center align-content-center">
 
 	<!-- HEADER DIV -->
-	<div class="bg-primary container-fluid d-flex align-items-center">
-		<a href="#" class="arrow-icon">
-			<i class="fas fa-arrow-left display-4"></i>
-		</a>
+	<div class="bg-primary container-fluid d-flex align-items-center py-3">
+		<img src="logo.png" alt="logo" id="logo">
 
-		<!-- HEADER TEXT -->
-		<div class="text-white display-4 text-center mx-auto">
-			Header
+		<div class="input-group">
+			<span class="input-group-text bg-dark border-0">
+				<i class="fas fa-search text-light"></i>
+			</span>
+			<input class="form-control bg-dark border-0 text-light" type="text"
+				placeholder="Search...">
+			<button class="btn border-0 bg-dark">
+				<i class="fas fa-qrcode text-light"></i>
+			</button>
 		</div>
+
+		<div class="d-flex justify-content-around ps-2">
+			<button class="btn text-light px-1">
+				<i class="fas fa-shopping-cart fs-5 nav-icon"></i>
+			</button>
+			<button class="btn text-light">
+				<i class="fas fa-user fs-5 nav-icon"></i>
+			</button>
+		</div>
+
 	</div>
 
 

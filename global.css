@@ -2,13 +2,33 @@
 	--bs-primary: #04c8c8;
 	--bs-secondary: #026464;
 	--bs-light: #e6fefe;
+	--bs-dark: rgb(0, 182, 182);
 	--bs-primary-rgb: 4, 200, 200;
 	--bs-secondary-rgb: 2, 100, 100;
 	--bs-light-rgb: 230, 254, 254;
+	--bs-dark-rgb: 0, 182, 182;
 	--bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
 		"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
+}
+
+.form-control::-moz-placeholder {
+	/* Firefox 19+ */
+	color: var(--bs-light);
+}
+.form-control:-ms-input-placeholder {
+	/* IE 10+ */
+	color: var(--bs-light);
+}
+.form-control:-moz-placeholder {
+	/* Firefox 18- */
+	color: var(--bs-light);
+}
+
+.form-control::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: var(--bs-light) !important;
 }
 
 .nav-link {
@@ -29,8 +49,19 @@
 	color: var(--bs-secondary);
 }
 
+#logo {
+	width: 64px;
+	height: 36px;
+}
 @media (min-width: 768px) {
 	.nav-link {
 		font-size: calc(1rem * 1.25);
+	}
+	#logo {
+		width: 128px;
+		height: 72px;
+	}
+	.nav-icon {
+		font-size: calc(1.275rem + 0.3vw) !important;
 	}
 }
