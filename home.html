@@ -78,11 +78,12 @@
 </body>
 
 <script>
-	$(document).ready(function () {
-		$('.arrow-icon').click(function () {
+	window.onload = function () {
+		var arrow = document.querySelector('.arrow-icon');
+		arrow.addEventListener('click', function () {
 			window.history.back();
 		});
-	});
+	}
 </script>
 
 </html>
