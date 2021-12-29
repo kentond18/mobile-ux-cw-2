@@ -13,15 +13,6 @@
 		"Noto Color Emoji";
 }
 
-.btn-primary {
-	background-color: var(--bs-primary);
-	border-color: var(--bs-primary);
-}
-
-.card {
-	border: 1px solid var(--bs-light);
-}
-
 .form-control::-moz-placeholder {
 	/* Firefox 19+ */
 	color: var(--bs-light);
@@ -58,6 +49,7 @@
 	color: var(--bs-secondary);
 }
 
+
 #logo {
 	width: 64px;
 	height: 36px;
@@ -73,4 +65,48 @@
 	.nav-icon {
 		font-size: calc(1.275rem + 0.3vw) !important;
 	}
+	
+	hr.solid {
+    border-top: 2px solid #999;
 }
+	
+	.address{
+	margin-left: 22px;
+	margin-top:-23px;
+
+	
+	}
+	.card-title{
+	
+	color:#039696;
+	}
+	
+	.link{
+	
+	color:#039696;
+	}
+	
+.btn-primary {
+  background-color:#04C8C8;
+  border-color: #04C8C8;
+  border-radius:40px;}
+	
+.btn-primary:hover {
+  background: #04C8C8;
+  border: #04C8C8;}
+
+.btn{
+	background-color: #04C8C8;
+	}
+	
+.stars{
+	float:right;
+	
+	}
+	
+.fa-calendar{
+	display:inline-block;
+	}
+	
+	
+	
