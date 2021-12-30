@@ -52,6 +52,21 @@
 	border-color: var(--bs-primary);
 }
 
+.btn-primary:focus {
+	box-shadow: 0 0 0 0.2rem rgba(4, 200, 200, 0.5);
+	background-color: var(--bs-primary);
+	border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+	background-color: var(--bs-secondary);
+	border-color: var(--bs-secondary);
+}
+
+.dropdown-item:focus {
+	background-color: var(--bs-primary);
+}
+
 .btn-light {
 	background-color: var(--bs-light);
 	border-color: var(--bs-light);

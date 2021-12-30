@@ -1,106 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			defer
+			src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+			integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+			crossorigin="anonymous"
+		></script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+		</style>
+		<link rel="stylesheet" href="/global.css" />
+		<link rel="icon" href="/../images/32px.png" sizes="32x32" />
+		<title>Home - London Bridge Adventures</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<link
-		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-		rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-		crossorigin="anonymous">
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-		crossorigin="anonymous"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-		integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
-		crossorigin="anonymous"></script>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-	</style>
-	<link rel="stylesheet" href="/global.css">
-	<link rel="icon" href="/../images/32px.png" sizes="32x32">
-	<title>Home - London Bridge Adventures</title>
-</head>
+	<body
+		class="
+			flex flex-column
+			vh-100
+			justify-content-center
+			align-content-center
+		"
+	>
+		<!-- HEADER DIV -->
+		<div class="bg-primary container-fluid d-flex align-items-center py-3">
+			<!-- <img src="logo.png" alt="logo" id="logo"> -->
 
-<body
-	class="flex flex-column vh-100 justify-content-center align-content-center">
+			<div class="input-group">
+				<span class="input-group-text bg-dark border-0">
+					<i class="fas fa-search text-light"></i>
+				</span>
+				<input
+					class="form-control bg-dark border-0 text-light"
+					type="text"
+					placeholder="Search..."
+				/>
+				<button class="btn border-0 bg-dark">
+					<i class="fas fa-qrcode text-light"></i>
+				</button>
+			</div>
 
-	<!-- HEADER DIV -->
-	<div class="bg-primary container-fluid d-flex align-items-center py-3">
-		<!-- <img src="logo.png" alt="logo" id="logo"> -->
-
-		<div class="input-group">
-			<span class="input-group-text bg-dark border-0">
-				<i class="fas fa-search text-light"></i>
-			</span>
-			<input class="form-control bg-dark border-0 text-light" type="text"
-				placeholder="Search...">
-			<button class="btn border-0 bg-dark">
-				<i class="fas fa-qrcode text-light"></i>
-			</button>
+			<div class="d-flex justify-content-around ps-2">
+				<button class="btn text-light px-1">
+					<i class="fas fa-shopping-cart fs-5 nav-icon"></i>
+				</button>
+				<button class="btn text-light">
+					<i class="fas fa-user fs-5 nav-icon"></i>
+				</button>
+			</div>
 		</div>
 
-		<div class="d-flex justify-content-around ps-2">
-			<button class="btn text-light px-1">
-				<i class="fas fa-shopping-cart fs-5 nav-icon"></i>
-			</button>
-			<button class="btn text-light">
-				<i class="fas fa-user fs-5 nav-icon"></i>
-			</button>
-		</div>
+		<!-- NAVBAR -->
+		<!-- Update the href link respectively -->
 
-	</div>
+		<nav class="navbar bg-light fixed-bottom">
+			<ul
+				class="
+					navbar-nav
+					w-100
+					d-flex
+					flex-row
+					justify-content-around
+					align-items-center
+				"
+			>
+				<li class="nav-item">
+					<a class="nav-link" href="visit.html">
+						<i class="fas fa-bus me-1 fs-5"></i>Visit
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="eat.html">
+						<i class="fas fa-utensils me-1 fs-5"></i>Eat
+					</a>
+				</li>
+				<li class="nav-item">
+					<!-- Please move aria-current="page" to the respective page -->
+					<a class="nav-link" aria-current="page" href="index.html">
+						<i class="fas fa-home me-1 fs-5"></i>Home
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="tours.html">
+						<i class="far fa-compass me-1 fs-5"></i>Tours
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="saved.html">
+						<i class="fas fa-heart me-1 fs-5"></i>Saved
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</body>
 
-
-	<!-- NAVBAR -->
-	<!-- Update the href link respectively -->
-
-	<nav class="navbar bg-light fixed-bottom">
-		<ul
-			class="navbar-nav w-100 d-flex flex-row justify-content-around align-items-center">
-			<li class="nav-item">
-				<a class="nav-link" href="visit.html">
-					<i class="fas fa-bus me-1 fs-5"></i>Visit
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="eat.html">
-					<i class="fas fa-utensils me-1 fs-5"></i>Eat
-				</a>
-			</li>
-			<li class="nav-item">
-				<!-- Please move aria-current="page" to the respective page -->
-				<a class="nav-link" aria-current="page" href="index.html">
-					<i class="fas fa-home me-1 fs-5"></i>Home
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="tours.html">
-					<i class="far fa-compass me-1 fs-5"></i>Tours
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="saved.html">
-					<i class="fas fa-heart me-1 fs-5"></i>Saved
-				</a>
-			</li>
-		</ul>
-
-
-	</nav>
-
-</body>
-
-<script>
-	window.onload = () => {
-		var arrow = document.querySelector('.arrow-icon');
-		arrow.addEventListener('click', () => {
-			window.history.back();
-		});
-	}
-</script>
-
+	<script>
+		window.onload = () => {
+			if (
+				!window.localStorage.getItem("ratings") ||
+				window.localStorage.getItem("ratings") == ""
+			) {
+				localStorage.setItem(
+					"ratings",
+					JSON.stringify({
+						visit: [
+							{
+								userName: "user1",
+								title: "title 1",
+								rating: 3,
+								review: "review 1",
+								date: "2020-01-01",
+							},
+							{
+								userName: "user2",
+								title: "title 2",
+								rating: 4,
+								review: "review 2",
+								date: "2020-01-02",
+							},
+							{
+								userName: "user3",
+								title: "title 3",
+								rating: 5,
+								review: "review 3",
+								date: "2020-01-03",
+							},
+						],
+					})
+				);
+			}
+		};
+	</script>
 </html>

@@ -60,6 +60,46 @@
 			</p>
 		</div>
 
+		<!-- Filter Button -->
+
+		<div class="d-flex justify-content-end container py-3 input-group">
+			<button
+				class="btn btn-primary dropdown-toggle"
+				type="button"
+				data-bs-toggle="dropdown"
+				aria-expanded="false"
+			>
+				Dropdown
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" onclick="showStar(1)"
+						>1 Star Reviews</a
+					>
+				</li>
+				<li>
+					<a class="dropdown-item" onclick="showStar(2)"
+						>2 Star Reviews</a
+					>
+				</li>
+				<li>
+					<a class="dropdown-item" onclick="showStar(3)"
+						>3 Star Reviews</a
+					>
+				</li>
+				<li>
+					<a class="dropdown-item" onclick="showStar(4)"
+						>4 Star Reviews</a
+					>
+				</li>
+				<li>
+					<a class="dropdown-item" onclick="showStar(5)"
+						>5 Star Reviews</a
+					>
+				</li>
+			</ul>
+		</div>
+
 		<!-- MAIN CONTENT DIV -->
 		<div
 			class="
@@ -70,84 +110,49 @@
 				align-items-center
 				flex-column flex-md-row
 			"
+			id="ratings-container"
 		>
-			<div class="card bg-light mb-2" style="width: 18em">
-				<div class="card-body">
-					<div
-						class="
-							d-flex
-							justify-content-between
-							align-items-center
-						"
-					>
-						<p class="fw-light fs-4 text-secondary">Username</p>
-						<p class="fw-semibold fs-3 text-secondary">Title</p>
-					</div>
-
-					<div class="d-flex justify-content-between">
-						<div id="rating" class="text-warning">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
+			<template id="rating-card">
+				<div class="card bg-light mb-2" style="width: 18em">
+					<div class="card-body">
+						<div
+							class="
+								d-flex
+								justify-content-between
+								align-items-center
+							"
+						>
+							<p
+								class="fw-light fs-4 text-secondary"
+								id="username"
+							></p>
+							<p
+								class="fw-semibold fs-3 text-secondary"
+								id="title"
+							></p>
 						</div>
 
-						<p class="text-primary" id="date">text</p>
-					</div>
+						<div class="d-flex justify-content-between">
+							<div id="rating" class="text-warning"></div>
 
-					<p class="card-text text-muted">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Dignissimos, veniam rerum? A perferendis, sed nisi
-						commodi minus dignissimos vitae rem accusamus velit ad
-						adipisci sunt nemo, molestiae maxime rerum. Quo!
-					</p>
-
-					<div class="d-flex justify-content-end align-items-center">
-						<i class="far fa-thumbs-up mx-2 text-success"></i>
-						<i class="far fa-thumbs-down text-danger"></i>
-					</div>
-				</div>
-			</div>
-
-			<div class="card bg-light mb-2" style="width: 18em">
-				<div class="card-body">
-					<div
-						class="
-							d-flex
-							justify-content-between
-							align-items-center
-						"
-					>
-						<p class="fw-light fs-4 text-secondary">Username</p>
-						<p class="fw-semibold fs-3 text-secondary">Title</p>
-					</div>
-
-					<div class="d-flex justify-content-between">
-						<div id="rating" class="text-warning">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
+							<p class="text-primary" id="date"></p>
 						</div>
 
-						<p class="text-primary" id="date2">text</p>
-					</div>
+						<p class="card-text text-muted" id="review"></p>
 
-					<p class="card-text text-muted">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Dignissimos, veniam rerum? A perferendis, sed nisi
-						commodi minus dignissimos vitae rem accusamus velit ad
-						adipisci sunt nemo, molestiae maxime rerum. Quo!
-					</p>
-
-					<div class="d-flex justify-content-end align-items-center">
-						<i class="far fa-thumbs-up mx-2 text-success"></i>
-						<i class="far fa-thumbs-down text-danger"></i>
+						<div
+							class="
+								d-flex
+								justify-content-end
+								align-items-center
+							"
+						>
+							<i class="far fa-thumbs-up mx-2 text-success"></i>
+							<i class="far fa-thumbs-down text-danger"></i>
+						</div>
 					</div>
 				</div>
-			</div>
+			</template>
 
 			<div class="card bg-primary mb-2" style="width: 18em">
 				<form>
@@ -323,19 +328,38 @@
 			</ul>
 		</nav>
 	</body>
+
 	<script>
 		window.onload = () => {
 			const arrow = document.querySelector(".arrow-icon");
 			arrow.addEventListener("click", () => {
 				window.history.back();
 			});
-			document.getElementById("date").innerHTML =
-				new Date().toLocaleDateString();
-			document.getElementById("date2").innerHTML =
-				new Date().toLocaleDateString();
-			document.getElementById("date3").innerHTML =
-				new Date().toLocaleDateString();
-			const rating = document.getElementById("rating");
+
+			const ratingContainer =
+				document.getElementById("ratings-container");
+			const cardTemplate = document.getElementById("rating-card");
+
+			const ratings = JSON.parse(localStorage.getItem("ratings"));
+
+			if (ratings) {
+				ratings.visit.forEach((rating) => {
+					console.log(rating.userName);
+					const card = cardTemplate.cloneNode(true);
+					console.log(card.querySelector("#username"));
+					card.removeAttribute("id");
+					card.querySelector("#username").innerHTML = rating.userName;
+					card.querySelector("#date").innerHTML = rating.date;
+					card.querySelector("#review").innerHTML = rating.review;
+
+					for (let i = 0; i < rating.rating; i++) {
+						card.querySelector("#rating").innerHTML =
+							"<i class='fas fa-star'></i>";
+					}
+
+					ratingContainer.appendChild(card);
+				});
+			}
 		};
 		const onMouseOverRating = (e) => {
 			e.classList.remove("far");
