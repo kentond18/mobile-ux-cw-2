@@ -93,11 +93,9 @@
 	
 .btn-primary:hover {
   background: #04C8C8;
-  border: #04C8C8;}
+  border: #04C8C8;
+}
 
-.btn{
-	background-color: #04C8C8;
-	}
 	
 .stars{
 	float:right;
