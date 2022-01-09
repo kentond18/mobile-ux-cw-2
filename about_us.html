@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+	</script><!--<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>-->
+
+	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js">
+	</script>
+	<link href="global.css" rel="stylesheet">
+	<link href="/../images/32px.png" rel="icon" sizes="32x32">
+	<link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" type="text/css">
+	<title>Home - London Bridge Adventures</title>
+	<style>
+ @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	  .col-7 .card{
+	  	height: 800px;}
+}
+	
+	</style>
+</head>
+<body style="padding-top: 5em; padding-bottom: 4em;">
+	<!-- HEADER DIV -->
+	<div class="bg-primary container-fluid d-flex align-items-center fixed-top">
+		<a class="arrow-icon" href="index.html"><i class="fas fa-arrow-left display-4"></i></a> <!-- HEADER TEXT -->
+		<div class="text-white display-4 text-center mx-auto">
+			About Us
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-7">
+				<div class="card bg-light rounded-3 mb-3" style="height:810px;">
+				<div class="card-body">
+					<h4 class="card-title" style="text-align:center;">London Bridge Tour</h4>
+					<p class="card-text">London Bridge Tours is the official tourism mobile applicaton for information and guidance about the area. London Bridge, located in the London borough of Southwark, is home to shows, food events, attractions, and a great nightlife.</p>
+				</div><img alt="Card image" class="card-img-bottom" src="London.jpeg" style="width: 100%; height:100%;"></div>
+			</div>
+			<div class="col-5">
+				<div class="row">
+					<div class="col">
+						<div class="card bg-light rounded-3 mb-3 h-auto">
+							<div class="card-body">
+								<h4 class="card-title" style="text-align:center;">Short Video</h4>
+								<div>
+									<iframe width="100%" height="300" src="https://www.youtube.com/embed/bzjPehOdLAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--This row contains the second column-->
+				<div class="row">
+					<div class="col">
+						<div class="card bg-light rounded-3 mb-3 h-auto">
+							<div class="card-body">
+								<h4 class="card-title" style="text-align:center">Location</h4>
+								<div>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.4405325369385!2d-0.09943892498674635!3d51.50282907709626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a79d6a86a3%3A0x3b65e5f7eae91d8e!2sDisney%20St%2C%20London%20SE1%201JF!5e0!3m2!1sen!2suk!4v1641733622411!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								</div>
+								<p class="my-location" style="background-color:#186666;color:white;text-align:center;"><i class="fas fa-location-arrow"></i>SE1 1JF</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- NAVBAR -->
+	<nav class="navbar bg-light fixed-bottom">
+		<ul class="navbar-nav w-100 d-flex flex-row justify-content-around align-items-center">
+			<li class="nav-item">
+				<a class="nav-link" href="visit.html"><i class="fas fa-bus me-1 fs-5"></i>Visit</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="eat.html"><i class="fas fa-utensils me-1 fs-5"></i>Eat</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="index.html"><i class="fas fa-home me-1 fs-5"></i>Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="tours.html"><i class="far fa-compass me-1 fs-5"></i>Tours</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="saved.html"><i class="fas fa-heart me-1 fs-5"></i>Saved</a>
+			</li>
+		</ul>
+	</nav>
+	<script>
+	   window.onload = () => {
+	       var arrow = document.querySelector('.arrow-icon');
+	       arrow.addEventListener('click', () => {
+	           window.history.back();
+	       });
+	   }
+	</script>
+</body>
+</html>

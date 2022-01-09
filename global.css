@@ -113,3 +113,50 @@
 		font-size: calc(1.275rem + 0.3vw) !important;
 	}
 }
+
+hr.solid {
+    border-top: 2px solid #999;
+}
+	
+	.address{
+	margin-left: 22px;
+	margin-top:-23px;
+
+	
+	}
+	.card-title{
+	
+	color:#039696;
+	}
+	
+	.link{
+	
+	color:#039696;
+	}
+	
+.btn-primary {
+  background-color:#04C8C8;
+  border-color: #04C8C8;
+  border-radius:40px;}
+	
+.btn-primary:hover {
+  background: #04C8C8;
+  border: #04C8C8;}
+
+.btn{
+	background-color: #04C8C8;
+	}
+	
+.stars{
+	float:right;
+	
+	}
+	
+.fa-calendar{
+	display:inline-block;
+	}
+input[type="text"]{
+	background-color:#B9FEFE;
+	}
+
+
