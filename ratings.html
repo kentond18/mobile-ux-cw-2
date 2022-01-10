@@ -105,9 +105,16 @@
 					</p>
 
 					<div class="d-flex justify-content-end align-items-center">
-						<i class="far fa-thumbs-up mx-2 text-success"></i>
-						<i class="far fa-thumbs-down text-danger"></i>
+                        <button id="likeProcess" class="like_btn"><span id="icon"><i class="far fa-thumbs-up mx-2 text-success"></i></span>
+                        <span id="count"></span>
+                        </button>
+                        <input id="input1" value="0" name="">
+                        <button id="dislikeProcess" class="dislike_btn"><span id="icon"><i class="far fa-thumbs-down text-danger"></i></span>
+                        <span id="count"></span>
+                        </button>
+                        <input id="input2" value="0" name="">
 					</div>
+					
 				</div>
 			</div>
 
@@ -143,10 +150,17 @@
 						adipisci sunt nemo, molestiae maxime rerum. Quo!
 					</p>
 
-					<div class="d-flex justify-content-end align-items-center">
-						<i class="far fa-thumbs-up mx-2 text-success"></i>
-						<i class="far fa-thumbs-down text-danger"></i>
+					     <div class="d-flex justify-content-end align-items-center">
+                        <button id="likeProcessTwo" class="like_btnn"><span id="icon"><i class="far fa-thumbs-up mx-2 text-success"></i></span>
+                        <span id="count"></span>
+                        </button>
+                        <input id="input3" value="0" name="">
+                        <button id="dislikeProcessTwo" class="dislike_btnn"><span id="icon"><i class="far fa-thumbs-down text-danger"></i></span>
+                        <span id="count"></span>
+                        </button>
+                        <input id="input4" value="0" name="">
 					</div>
+					
 				</div>
 			</div>
 
@@ -263,13 +277,16 @@
 									btn btn-outline-light btn-sm
 									text-white
 									mx-2
-								"
+								" onclick="displayComment()"
 							>
 								Submit
 							</button>
 						</div>
 					</div>
 				</form>
+				<ul class="list"></ul>
+  				<label>The Result: </label>
+				<span id="showAnswer"></span>
 			</div>
 		</div>
 
@@ -346,5 +363,42 @@
 			e.classList.remove("fas");
 			e.classList.add("far");
 		};
+		
+		 function displayComment() {
+            var theUsername = document.getElementById("username").value;          
+            var theTitle = document.getElementById("title").value;
+			var theReview = document.getElementById("review").value;
+  	 
+            var output = theUsername + ' ' + theTitle + ' ' + theReview;
+            document.getElementById('showAnswer').textContent = output;
+		   return false};
+		
 	</script>
+	
+  <script>
+        let likeProcess = document.querySelector('#likeProcess');
+        let dislikeProcess = document.querySelector('#dislikeProcess');
+        let input1 = document.querySelector('#input1');
+        let input2 = document.querySelector('#input2');
+        
+        likeProcess.addEventListener('click' ,()=>{
+            input1.value = parseInt(input1.value) + 1;
+        })
+        
+        dislikeProcess.addEventListener('click',()=>{
+            input2.value = parseInt(input2.value) + 1;
+            })
+        
+        likeProcessTwo.addEventListener('click',()=>{
+            input3.value = parseInt(input3.value) + 1;
+            })
+        
+        
+        dislikeProcessTwo.addEventListener('click',()=>{
+            input4.value = parseInt(input4.value) + 1;
+            })
+    
+    
+    </script>
+	
 </html>
