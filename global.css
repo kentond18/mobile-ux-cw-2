@@ -155,12 +155,10 @@ hr.solid {
 .fa-calendar{
 	display:inline-block;
 	}
+input[type="text"]{
+	background-color:#B9FEFE;
+	}
 
-input{
-    width: 50px;
-    border: none;
-    background: none;
-    }
 
 
 
