@@ -152,4 +152,14 @@
 	   }
 	</script>
 </body>
+
+<script>
+	window.onload = () => {
+		var arrow = document.querySelector('.arrow-icon');
+		arrow.addEventListener('click', () => {
+			window.history.back();
+		});
+	}
+</script>
+
 </html>
